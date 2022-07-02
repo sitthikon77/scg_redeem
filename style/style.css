@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'scgbold';
+    src: url('scg-bol-webfont.woff2') format('woff2'),
+         url('scg-bol-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'scgitalic';
+    src: url('scg-italic-webfont.woff2') format('woff2'),
+         url('scg-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'scglight';
+    src: url('scg-lig-webfont.woff2') format('woff2'),
+         url('scg-lig-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'scgregular';
+    src: url('scg-reg-webfont.woff2') format('woff2'),
+         url('scg-reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%);
+  }
+
+  ::selection {
+    background-color: rgb(255, 1, 39);
+    color: #fff;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+   .responsive_quest{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px;
+      margin-left: 50px;
+   }
+   .text-content_quest{
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .responsive_reward{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+   .text-content_reward{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+ }
+  
+  }

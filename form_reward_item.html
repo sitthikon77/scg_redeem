@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCG | Redeem Form</title>
+   
+    <!-- Config -->
+    <script src="config.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+    
+</head>
+<body>
+    <!-- header -->    
+    <header 
+        style="background-image: url(img/bg_header.png) ; 
+        background-attachment: fixed; 
+        background-repeat: no-repeat;   
+        background-position: center;
+        background-size: 240vh 120vh;"
+    >
+        <div  class="container px-5 py-12 mx-auto">
+            <div class="flex flex-col text-center w-full">
+
+                <!-- Coin icon -->
+                <div class="flex justify-center">
+                    <img class="w-20" src="img/scg_coin.png" alt="">
+                </div>
+
+                <!-- Coin text header -->
+                <h1 style="font-family: 'scgbold'; color: #d82027;"
+                 class=" text-3xl  mb-2 mt-2 ">
+                 ภารกิจสะสมเหรียญ SCG MISSION
+                </h1>
+                
+                <!-- Coin -->
+                <p style="font-family: 'scgregular'; color: #1c1c1c;"
+                 class=" text-3xl mx-auto">
+                    คะแนนสะสม <spn>500 coin</spn>
+                </p>
+
+            </div>
+        </div>
+    </header>
+    <!-- Section -->
+    <section>
+        <div class=" mx-auto">
+            <div class="flex flex-col  w-auto">
+                <!-- Tab -->
+                <div class="flex mx-auto w-full rounded overflow-hidden ">
+
+                    <a href="redeem_quest.html" 
+                    class="inline-block py-2 w-full text-center px-8 active rounded-t-3xl"
+                    style="font-family: 'scgbold'; color: #565656; background-color: #c1c1c1;  font-size: 1.5rem;">
+                    ภารกิจของคุณ
+                    </a>
+
+                    <a href="redeem_reward.html" 
+                    class=" inline-block py-2 px-8 w-full text-center  active rounded-t-3xl"
+                    style="font-family: 'scgbold'; color: #d82027; background-color: #efefef;  font-size: 1.5rem;"
+                    >
+                    แลกของรางวัล
+                    </a>
+
+                </div>
+                
+                <div class="flex mx-auto justify-center  w-full overflow-y-auto" style="background-color: #efefef; height: 55vh;">
+                    <div class=" mx-auto p-3 w-full rounded">                     
+                        <!-- Reward-List -->
+                        <form class="flex w-full mb-4 py-4 px-1" style="background-color:#efefef;" >
+
+                            <div class="flex flex-col w-72 md:w-full sm:w-full">
+
+                                <div class="flex justify-start mb-2">
+                                    <p class="" style="font-family: 'scgregular'; color: #444444; font-size: 1rem; ">คุณเลือกแลก</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <p class="" style="font-family: 'scgregular'; color: #444444; font-size: 1rem; ">ใช้คะแนน</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <p class="" style="font-family: 'scgregular'; color: #444444; font-size: 1rem; ">ชื่อ-นามสกุล</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <p class="" style="font-family: 'scgregular'; color: #444444; font-size: 1rem; ">เบอร์ติดต่อ</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <p class="" style="font-family: 'scgregular'; color: #444444; font-size: 1rem; ">ที่อยู่</p>
+                                </div>
+
+                            </div>      
+
+                            <div class="flex flex-col w-full h-28  ">
+
+                                <div class="flex justify-start mb-2">
+                                    <p style="font-family: 'scgbold'; color: #000; font-size: 1rem; ">แลกรับกระเป๋าใส่ของจากถุงปูน</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <p style="font-family: 'scgbold'; color: #000; font-size: 1rem; ">150 Coin</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <input style="font-family: 'scgbold';" type="text" id="Name" class="p-0 px-1 rounded-md  border-gray-300 block w-60 focus:ring-red-600 focus:border-red-600"  required>
+                                </div>
+
+                                <div class="flex justify-start mb-2">
+                                    <input style="font-family: 'scgbold';" type="tel" pattern="[0-9]{10}" id="Phone" class="p-0 px-1 rounded-md border-gray-300  block w-60 focus:ring-red-600 focus:border-red-600"  required>
+                                </div>
+
+                                 <div class="flex justify-start mb-2">
+                                    <textarea style="font-family: 'scgbold';" id="message" rows="3" class="p-0 px-1 block w-60 text-sm  bg-gray-50 rounded-md border border-gray-300 focus:ring-red-600 focus:border-red-600"></textarea>
+                                </div>
+
+                                <div class="flex justify-start mb-2 mt-4">
+                                    <p class="w-60" style="font-family: 'scgregular'; font-size: 0.7rem;">เงื่อนไข : การจัดส่งของที่ระลึกภายใน 15 วัน และ NFT จัดส่งภายใน 30 วัน 
+                                        ตรวจสอบสถานะการจัดส่งของรางวัลและกรณีแจ้งเปลี่ยนคืนสินค้าเสียหาย 
+                                        จะสามารถติดต่อ </p>
+                                </div>
+
+                                <div class="flex justify-start  mb-2">
+                                    <p class="w-60" style="font-family: 'scgbold'; font-size: 0.9rem;">Email : esgsymposium@scg.com</p>
+                                </div>
+
+                                <div class="flex justify-start mb-2 mt-8">
+                                    <button class="ml-16 p-1" style="font-family: 'scgbold'; width: 120px; color: #efefef; background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%); font-size: 1.1rem; border-radius: 10px;">
+                                        SUBMIT
+                                    </button>
+                                </div>
+
+                            </div>  
+                            
+                            
+                        </form>           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

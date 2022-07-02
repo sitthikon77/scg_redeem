@@ -1,0 +1,133 @@
+{
+  "listQuest_scg": [
+    {
+      "imgQuest": "img/Solar_Floating.png",
+      "nameQuest": "Solar Floating",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/3D_Printing.png",
+      "nameQuest": "3D Printing",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/โรงจอดรถ_Solar_cell.png",
+      "nameQuest": "โรงจอดรถ Solar cell",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที (Avatar Mode) VR Interactive (VR Mode)",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/สะพาน_CPAC_Ultra Crete_Bridge.png",
+      "nameQuest": "สะพาน CPAC Ultra Crete Bridge",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/ESG_101_Zone.png",
+      "nameQuest": "ESG 101 Zone",
+      "detailQuest": "เล่นเกม Quiz ตอบคำถาม",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/ESG_Pathway_Zone.png",
+      "nameQuest": "ESG Pathway Zone",
+      "detailQuest": "เล่นเกม The Maze Game (เขาวงกต)",
+      "coinQuest": "50 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/Solution&Collaboration_Zone.png",
+      "nameQuest": "Solution & Collaboration Zone",
+      "detailQuest": "เล่นเกม Jigsaw",
+      "coinQuest": "50 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/solution&Collaboration_1.png",
+      "nameQuest": "Solution & Collaboration",
+      "detailQuest": "Zone : บอร์ดจัดแสดง Environmental เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/solution&Collaboration_2.png",
+      "nameQuest": "Solution & Collaboration",
+      "detailQuest": "Zone : บอร์ดจัดแสดง Social เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/solution&Collaboration_3.png",
+      "nameQuest": "Solution & Collaboration",
+      "detailQuest": "Zone : บอร์ดจัดแสดง Governance เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    },
+    {
+      "imgQuest": "img/solution&Collaboration_4.png",
+      "nameQuest": "Solution & Collaboration",
+      "detailQuest": "Zone : บอร์ดจัดแสดง Inspiration story เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "10 coin",
+      "logoVerse": "img/icon_scgverse.png"
+    }
+  ],
+
+  "listQuest_esc": [
+    {
+      "imgQuest": "img/ห้องสัมมนาย่อย_Pre_Session.png",
+      "nameQuest": "ห้องสัมมนาย่อย Pre Session",
+      "detailQuest": "เล่นเกม Quiz ตอบคำถาม",
+      "coinQuest": "40 coin",
+      "logoVerse": "img/icon_esg.png"
+    },
+    {
+      "imgQuest": "img/ห้องนิทรรศการ_Exhibition.png",
+      "nameQuest": "ห้องนิทรรศการ Exhibition",
+      "detailQuest": "เล่นเกม Quiz ตอบคำถาม",
+      "coinQuest": "40 coin",
+      "logoVerse": "img/icon_esg.png"
+    },
+    {
+      "imgQuest": "img/ห้องนิทรรศการ_Exhibition1.png",
+      "nameQuest": "ห้องนิทรรศการ Exhibition",
+      "detailQuest": "เข้าชมห้องนิทรรศการ ดูข้อมูล 5 นาที",
+      "coinQuest": "70 coin",
+      "logoVerse": "img/icon_esg.png"
+    },
+    {
+      "imgQuest": "img/Women.png",
+      "nameQuest": "Women Empowerment to Drive Sustainable Economy",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "30 coin",
+      "logoVerse": "img/icon_esg.png"
+    },
+    {
+      "imgQuest": "img/HackstoHeal.png",
+      "nameQuest": "Hacks to Heal Our Planet: ESG Idea Pitching",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "30 coin",
+      "logoVerse": "img/icon_esg.png"
+    },
+    {
+      "imgQuest": "img/Powerof_Innovation.png",
+      "nameQuest": "Power of Innovation to Net Zero",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "30 coin",
+      "logoVerse": "img/icon_esg.png"
+    },
+    {
+      "imgQuest": "img/CEO_Forum.png",
+      "nameQuest": "CEO Forum : Collaboration for Low-Carbon Society",
+      "detailQuest": "เข้าชมเว็บไซต์ 1 นาที",
+      "coinQuest": "30 coin",
+      "logoVerse": "img/icon_esg.png"
+    }
+  ]
+}

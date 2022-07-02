@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCG | Redeem Reward</title>
+
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Config -->
+    <script src="config.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+
+</head>
+
+<body>
+    <!-- header -->
+    <header style="background-image: url(img/bg_header.png) ; 
+        background-attachment: fixed; 
+        background-repeat: no-repeat;   
+        background-position: center;
+        background-size: 240vh 120vh;">
+        <div class="container px-5 py-12 mx-auto">
+            <div class="flex flex-col text-center w-full">
+
+                <!-- Coin icon -->
+                <div class="flex justify-center">
+                    <img class="w-20" src="img/scg_coin.png" alt="">
+                </div>
+
+                <!-- Coin text header -->
+                <h1 style="font-family: 'scgbold'; color: #d82027;" class=" text-3xl  mb-2 mt-2 ">
+                    ภารกิจสะสมเหรียญ SCG MISSION
+                </h1>
+
+                <!-- Coin -->
+                <p style="font-family: 'scgregular'; color: #1c1c1c;" class=" text-3xl mx-auto">
+                    คะแนนสะสม <span id="coin_user" style="color: #d82027; font-weight: bold"></span>
+                    coin
+                </p>
+
+            </div>
+        </div>
+    </header>
+    <!-- Section -->
+    <section>
+        <div class="mx-auto">
+            <div class="flex flex-col  w-auto">
+                <!-- Tab -->
+                <div class="flex mx-auto w-full  overflow-hidden ">
+
+                    <a href="redeem_quest.html" class="inline-block py-2 w-full text-center px-8 active rounded-t-3xl"
+                        style="font-family: 'scgbold'; color: #565656; background-color: #c1c1c1;  font-size: 1.5rem;">
+                        ภารกิจของคุณ
+                    </a>
+
+                    <a href="#" class=" inline-block py-2 px-8 w-full text-center  active rounded-t-3xl"
+                        style="font-family: 'scgbold'; color: #d82027; background-color: #efefef;  font-size: 1.5rem;">
+                        แลกของรางวัล
+                    </a>
+
+                </div>
+
+                <div class="flex mx-auto justify-center  w-full overflow-y-auto"
+                    style="background-color: #efefef; height: 55vh;">
+                    <div class=" mx-auto p-6 w-full rounded">
+                        <div class="text-center">
+                            <p class="w-full" style="font-family: 'scgregular';">**เงื่อนไขการแลกของรางวัล (จำกัด 1 คน/1
+                                สิทธิ์การแลกเท่านั้น)**</p>
+                        </div>
+
+
+                        <!-- Reward-List 0 -->
+                        <div class="flex w-full text-center mt-6 mb-4 p-6" style="background-color:#fff;">
+
+                            <!-- image Reward -->
+                            <div class="responsive_reward flex  w-full ">
+                                <div class="text-content_reward  text-center ">
+                                    <div id="imgReward0">
+                                        <img src="img/SCGbag(a)_24Sep2020(copy)-76.jpg" class="w-60" alt="">
+                                    </div>
+
+                                </div>
+
+                                <!-- Text Reward -->
+                                <div class="text-content_reward flex flex-col p-6   text-left">
+
+                                    <!-- Reward Name -->
+                                    <h1 id="nameReward0"
+                                        class="text-content_reward w-84 sm:text-4xl text-3xl font-medium title-font "
+                                        style="font-family: 'scgbold';  font-size: 1.5rem;">แลกประเป๋าช็อปปิ้งจากถุงปูน
+                                    </h1>
+
+                                    <!-- Reward Name -->
+                                    <p class="sm:text-xl text-xl"
+                                        style="font-family: 'scgregular';  font-size: 1.1rem;">
+                                        จำนวนจำกัด
+                                    </p>
+
+                                    <!-- Coin -->
+                                    <div class="text-content_reward flex justify-center sm:justify-end w-80">
+                                        <button id="coinReward0" class="mt-2 p-1"
+                                            style="font-family: 'scgbold'; width: 120px; color: #efefef; background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%); font-size: 1.1rem; border-radius: 10px;">
+                                            150 Coin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reward-List1 -->
+                        <div class="flex w-full text-center mt-6 mb-4 p-6" style="background-color:#fff;">
+
+                            <!-- image Reward -->
+                            <div class="responsive_reward flex  w-full ">
+                                <div class="text-content_reward  text-center ">
+                                    <div id="imgReward1">
+                                        <img src="img/SCGbag(a)_24Sep2020(copy)-76.jpg" class="w-60" alt="">
+                                    </div>
+
+                                </div>
+
+                                <!-- Text Reward -->
+                                <div class="text-content_reward flex flex-col p-6   text-left">
+
+                                    <!-- Reward Name -->
+                                    <h1 id="nameReward1"
+                                        class="text-content_reward w-84 sm:text-4xl text-3xl font-medium title-font "
+                                        style="font-family: 'scgbold';  font-size: 1.5rem;">แลกประเป๋าช็อปปิ้งจากถุงปูน
+                                    </h1>
+
+                                    <!-- Reward Name -->
+                                    <p class="sm:text-xl text-xl"
+                                        style="font-family: 'scgregular';  font-size: 1.1rem;">
+                                        จำนวนจำกัด
+                                    </p>
+
+                                    <!-- Coin -->
+                                    <div class="text-content_reward flex justify-center sm:justify-end w-80">
+                                        <button id="coinReward1" class="mt-2 p-1"
+                                            style="font-family: 'scgbold'; width: 120px; color: #efefef; background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%); font-size: 1.1rem; border-radius: 10px;">
+                                            150 Coin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reward-List 2 -->
+                        <div class="flex w-full text-center mt-6 mb-4 p-6" style="background-color:#fff;">
+
+                            <!-- image Reward -->
+                            <div class="responsive_reward flex  w-full ">
+                                <div class="text-content_reward  text-center ">
+                                    <div id="imgReward2">
+                                        <img src="img/SCGbag(a)_24Sep2020(copy)-76.jpg" class="w-60" alt="">
+                                    </div>
+
+                                </div>
+
+                                <!-- Text Reward -->
+                                <div class="text-content_reward flex flex-col p-6   text-left">
+
+                                    <!-- Reward Name -->
+                                    <h1 id="nameReward2"
+                                        class="text-content_reward w-84 sm:text-4xl text-3xl font-medium title-font "
+                                        style="font-family: 'scgbold';  font-size: 1.5rem;">แลกประเป๋าช็อปปิ้งจากถุงปูน
+                                    </h1>
+
+                                    <!-- Reward Name -->
+                                    <p class="sm:text-xl text-xl"
+                                        style="font-family: 'scgregular';  font-size: 1.1rem;">
+                                        จำนวนจำกัด
+                                    </p>
+
+                                    <!-- Coin -->
+                                    <div class="text-content_reward flex justify-center sm:justify-end w-80">
+                                        <button id="coinReward2" class="mt-2 p-1"
+                                            style="font-family: 'scgbold'; width: 120px; color: #efefef; background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%); font-size: 1.1rem; border-radius: 10px;">
+                                            150 Coin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reward-List 3 -->
+                        <div class="flex w-full text-center mt-6 mb-4 p-6" style="background-color:#fff;">
+
+                            <!-- image Reward -->
+                            <div class="responsive_reward flex  w-full ">
+                                <div class="text-content_reward  text-center ">
+                                    <div id="imgReward3">
+                                        <img src="img/SCGbag(a)_24Sep2020(copy)-76.jpg" class="w-60" alt="">
+                                    </div>
+
+                                </div>
+
+                                <!-- Text Reward -->
+                                <div class="text-content_reward flex flex-col p-6   text-left">
+
+                                    <!-- Reward Name -->
+                                    <h1 id="nameReward3"
+                                        class="text-content_reward w-84 sm:text-4xl text-3xl font-medium title-font "
+                                        style="font-family: 'scgbold';  font-size: 1.5rem;">แลกประเป๋าช็อปปิ้งจากถุงปูน
+                                    </h1>
+
+                                    <!-- Reward Name -->
+                                    <p class="sm:text-xl text-xl"
+                                        style="font-family: 'scgregular';  font-size: 1.1rem;">
+                                        จำนวนจำกัด
+                                    </p>
+
+                                    <!-- Coin -->
+                                    <div class="text-content_reward flex justify-center sm:justify-end w-80">
+                                        <button id="coinReward3" class="mt-2 p-1"
+                                            style="font-family: 'scgbold'; width: 120px; color: #efefef; background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%); font-size: 1.1rem; border-radius: 10px;">
+                                            150 Coin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fixd-NFT-List -->
+                        <div class="flex w-full text-center mt-6 mb-4 p-6" style="background-color:#fff;">
+
+                            <!-- image fixd-NFT -->
+                            <div class="responsive_reward flex  w-full ">
+                                <div class="text-content_reward text-center ">
+                                    <div>
+                                        <img src="img/messageImage_1656573666963.jpg" class="w-60" alt="">
+                                    </div>
+
+                                </div>
+
+                                <!-- Text fixd-NFT -->
+                                <div class="text-content_reward flex flex-col p-6   text-left">
+
+                                    <!-- fixd-NFT Name -->
+                                    <h1 class="text-content_reward w-84 sm:text-4xl text-3xl font-medium title-font "
+                                        style="font-family: 'scgbold';  font-size: 1.5rem;">รับ NFT "SCG GreenNFT Box"
+                                    </h1>
+
+                                    <!-- fixd-NFT Name -->
+                                    <p class="sm:text-xl text-xl"
+                                        style="font-family: 'scgregular';  font-size: 1.1rem;">
+                                        &nbsp;
+                                    </p>
+
+                                    <!-- Coin -->
+                                    <div class="flex justify-center w-80 sm:justify-end">
+                                        <button class="mt-2 p-1"
+                                            style="font-family: 'scgbold'; width: 120px; color: #efefef; background :linear-gradient(0deg, rgb(182, 2, 29) 0%, rgb(255, 1, 39) 100%); font-size: 1.1rem; border-radius: 10px;">
+                                            500 Coin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Cookies fetch
+        const cookies =
+            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGktZGV2LnNjZ3ZlcnNlLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY1NjY3NTUyOCwiZXhwIjoxNjg4MjExNTI4LCJuYmYiOjE2NTY2NzU1MjgsImp0aSI6InB3RHhMeG8zbjVEMHhRT1IiLCJzdWIiOjk1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DysfXZ-TEUQ48uineSNpL2JkkF5PR7DfyUsv9QecE9I";
+        var mycoin = null;
+        var listReward = null;
+
+        // Get obj from .json file
+        $.getJSON("redeem_reward_data.json", function (json) {
+            listReward = json;
+            console.log(listReward)
+        });
+
+        // Get coin from api
+        var coin_user = new XMLHttpRequest();
+        coin_user.open("GET", api_prefix + "coinService/api/MyCoin");
+        coin_user.setRequestHeader("Authorization", "Bearer " + cookies);
+        coin_user.send();
+        coin_user.onload = () => {
+            if (coin_user.status === 200) {
+                mycoin = JSON.parse(coin_user.response);
+                console.log(mycoin)
+                fetchCoin();
+                fetchReward();
+            } else {
+                console.log(`error ${coin_user.status} ${coin_user.statusText}`);
+                console.log("ยืนยันตัวตนไม่ได้ / token หมดอายุ / JWT ไม่ถูกต้อง");
+            }
+        };
+
+        function fetchCoin() {
+            document.getElementById("coin_user").innerHTML = mycoin.totalScore;
+        }
+
+        function fetchReward() {
+            for (indexListReward = 0; indexListReward < listReward.listReward.length; indexListReward++) {
+                document.getElementById("imgReward" + indexListReward).innerHTML = `<img src="${listReward.listReward[indexListReward].imgReward}" class="w-60" alt="" />`;
+                document.getElementById("nameReward" + indexListReward).innerHTML = listReward.listReward[indexListReward].nameReward;
+                document.getElementById("coinReward" + indexListReward).innerHTML = listReward.listReward[indexListReward].coinReward;
+            }
+        }
+    </script>
+</body>
+
+</html>

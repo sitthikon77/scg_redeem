@@ -1,0 +1,24 @@
+{
+    "listReward": [
+        {
+            "imgReward": "img/SCGbag(a)_24Sep2020(copy)-78.jpg",
+            "nameReward": "แลกรับกระเป๋าช้อปปิ้งจากถุงปูน",
+            "coinReward": "150 coin"
+        },
+        {
+            "imgReward": "img/SCGbag(a)_24Sep2020(copy)-14.jpg",
+            "nameReward": "แลกรับกระเป๋าใส่ของจากถุงปูน",
+            "coinReward": "250 coin"
+        },
+        {
+            "imgReward": "img/SCGbag(a)_24Sep2020(copy)-34.jpg",
+            "nameReward": "แลกรับกระเป๋าสะพายจากถุงปูน",
+            "coinReward": "350 coin"
+        },
+        {
+            "imgReward": "img/SCGbag(a)_24Sep2020(copy)-72.jpg",
+            "nameReward": "แลกรับเก้าอี้จากถุงปูนรักษ์โลก",
+            "coinReward": "500 coin"
+        }
+    ]
+}

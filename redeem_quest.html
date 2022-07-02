@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCG | Redeem Quest</title>
+
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- Config -->
+  <script src="config.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style/style.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+
+  </head>
+
+  <body>
+    <!-- header -->
+    <header style="
+        background-image: url(img/bg_header.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 240vh 120vh;
+      ">
+      <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-col text-center w-full">
+          <!-- Coin icon -->
+          <div class="flex justify-center">
+            <img class="w-20" src="img/scg_coin.png" alt="" />
+          </div>
+
+          <!-- Coin text header -->
+          <h1 style="font-family: 'scgbold'; color: #d82027" class="text-3xl mb-2 mt-2">
+            ภารกิจสะสมเหรียญ SCG MISSION
+          </h1>
+
+          <!-- Coin -->
+          <p style="font-family: 'scgregular'; color: #1c1c1c" class="text-3xl mx-auto">
+            คะแนนสะสม
+            <span id="coin_user" style="color: #d82027; font-weight: bold"></span>
+            coin
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Section -->
+    <section>
+      <div class="mx-auto">
+        <div class="flex flex-col w-auto">
+          <!-- Tab -->
+          <div class="flex mx-auto w-full overflow-hidden">
+            <a href="#" class="inline-block py-2 w-full text-center px-8 active rounded-t-3xl" style="
+                font-family: 'scgbold';
+                color: #d82027;
+                background-color: #efefef;
+                font-size: 1.5rem;
+              ">
+              ภารกิจของคุณ
+            </a>
+
+            <a href="redeem_reward.html" class="inline-block py-2 px-8 w-full text-center active rounded-t-3xl" style="
+                font-family: 'scgbold';
+                color: #565656;
+                background-color: #c1c1c1;
+                font-size: 1.5rem;
+              ">
+              แลกของรางวัล
+            </a>
+          </div>
+          <div class="flex mx-auto justify-center w-full overflow-y-auto"
+            style="background-color: #efefef; height: 55vh">
+            <div class="mx-auto p-6">
+              <div class="flex flex-col w-full text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900"
+                  style="font-family: 'scgbold'; font-size: 1.5rem">
+                  ภารกิจสะสมเหรียญ SCG MISSION
+                </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base" style="
+                    font-family: 'scglight';
+                    font-size: 0.9rem;
+                    font-weight: 800;
+                  ">
+                  คุณสามารถร่วมทำภารกิจในการสะสมเหรียญผ่านทั้งทาง SCG Verse และ
+                  ESG Symposium โดยแต่ละจุดจะมีทั้ง Content และ Game
+                  ให้ร่วมสนุกกันโดยคะแนนรวมทั้งหมด 500 Coin
+                  เมื่อทำภารกิจแล้วสามารถแลกของที่ระลึก โดยกดที่ปุ่มแลกของรางวัล
+                </p>
+              </div>
+
+              <!-- Quest-List1 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest0" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest0" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest0" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest0" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse0">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List1 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest1" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest1" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest1" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest1" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse1">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List2 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest2" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest2" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest2" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest2" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse2">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List3 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest3" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest3" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest3" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest3" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse3">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List4 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest4" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest4" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest4" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest4" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse4">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List5 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest5" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest5" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest5" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest5" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse5">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List6 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest6" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest6" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest6" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest6" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse6">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List7 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest7" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest7" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest7" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest7" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse7">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List8 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest8" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest8" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest8" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest8" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse8">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List9 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest9" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest9" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest9" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest9" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse9">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List10 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest10" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest10" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest10" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest10" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse10">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List11 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest11" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest11" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest11" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest11" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse11">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List12 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest12" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest12" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest12" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest12" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse12">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List13 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest13" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest13" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest13" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest13" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse13">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List14 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest14" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest14" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest14" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest14" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse14">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List15 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest15" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest15" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest15" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest15" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse15">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List16 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest16" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest16" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest16" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest16" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse16">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quest-List17 -->
+              <div class="flex w-full justify-between text-center mt-6 mb-4 p-6" style="background-color: #fff">
+                <!-- image Zone -->
+                <div class="responsive_quest flex">
+                  <div id="imgQuest17" class="img">
+                    <img src="img/Solar_Floating.png" class="w-60" alt="" />
+                  </div>
+
+                  <!-- Text Zone -->
+                  <div class="text-content_quest flex flex-col px-4 text-left">
+                    <!-- Zone Name -->
+                    <h1 id="nameQuest17" class="text-content_quest" style="font-family: 'scgbold'; font-size: 1.5rem">
+                      Solar Floating
+                    </h1>
+
+                    <!-- Quest Name -->
+                    <p id="detailQuest17" class="text-content_quest"
+                      style="font-family: 'scgregular'; font-size: 1.1rem">
+                      เข้าชมเว็บไซต์ 1 นาที
+                    </p>
+
+                    <!-- Coin -->
+                    <div class="text-content_quest">
+                      <button id="coinQuest17" class="mt-2 p-1" style="
+                          font-family: 'scgbold';
+                          width: 120px;
+                          color: #efefef;
+                          background: linear-gradient(
+                            0deg,
+                            rgb(182, 2, 29) 0%,
+                            rgb(255, 1, 39) 100%
+                          );
+                          font-size: 1.1rem;
+                          border-radius: 10px;
+                        ">
+                        10 Coin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <div id="logoVerse17">
+                    <img src="img/icon_scgverse.png" class="w-24 -mt-5" alt="" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Cookies fetch
+      const cookies =
+        "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGktZGV2LnNjZ3ZlcnNlLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY1NjY3NTUyOCwiZXhwIjoxNjg4MjExNTI4LCJuYmYiOjE2NTY2NzU1MjgsImp0aSI6InB3RHhMeG8zbjVEMHhRT1IiLCJzdWIiOjk1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DysfXZ-TEUQ48uineSNpL2JkkF5PR7DfyUsv9QecE9I";
+      var mycoin = null;
+      var listQuest = null;
+
+      // Get obj from .json file
+      $.getJSON("redeem_quest_data.json", function (json) {
+        listQuest = json;
+      });
+
+      // Get coin from api
+      var coin_user = new XMLHttpRequest();
+      coin_user.open("GET", api_prefix + "coinService/api/MyCoin");
+      coin_user.setRequestHeader("Authorization", "Bearer " + cookies);
+      coin_user.send();
+      coin_user.onload = () => {
+        if (coin_user.status === 200) {
+          mycoin = JSON.parse(coin_user.response);
+          fetchCoin();
+          fetchQuest();
+        } else {
+          console.log(`error ${coin_user.status} ${coin_user.statusText}`);
+          console.log("ยืนยันตัวตนไม่ได้ / token หมดอายุ / JWT ไม่ถูกต้อง");
+        }
+      };
+
+      function fetchCoin() {
+        document.getElementById("coin_user").innerHTML = mycoin.totalScore;
+      }
+      function fetchQuest() {
+        let i = 0;
+        for (let indexListQuest = 0; indexListQuest < listQuest.listQuest_scg.length; indexListQuest++) {
+          document.getElementById("imgQuest" + indexListQuest).innerHTML = `<img src="${listQuest.listQuest_scg[indexListQuest].imgQuest}" class="w-60" alt="" />`;
+          document.getElementById("nameQuest" + indexListQuest).innerHTML = listQuest.listQuest_scg[indexListQuest].nameQuest;
+          document.getElementById("detailQuest" + indexListQuest).innerHTML = listQuest.listQuest_scg[indexListQuest].detailQuest;
+          document.getElementById("coinQuest" + indexListQuest).innerHTML = listQuest.listQuest_scg[indexListQuest].coinQuest;
+          document.getElementById("logoVerse" + indexListQuest).innerHTML = `<img src="${listQuest.listQuest_scg[indexListQuest].logoVerse}" class="w-24 -mt-5" />`;
+        }
+        for (let indexListQuest = 11; indexListQuest < 18; indexListQuest++) {
+          document.getElementById("imgQuest" + indexListQuest).innerHTML = `<img src="${listQuest.listQuest_esc[i].imgQuest}" class="w-60" alt="" />`;
+          document.getElementById("nameQuest" + indexListQuest).innerHTML = listQuest.listQuest_esc[i].nameQuest;
+          document.getElementById("detailQuest" + indexListQuest).innerHTML = listQuest.listQuest_esc[i].detailQuest;
+          document.getElementById("coinQuest" + indexListQuest).innerHTML = listQuest.listQuest_esc[i].coinQuest;
+          document.getElementById("logoVerse" + indexListQuest).innerHTML = `<img src="${listQuest.listQuest_esc[i].logoVerse}" class="w-20 -mt-5" />`;
+          i++;
+        }
+      }
+    </script>
+  </body>
+
+</html>
